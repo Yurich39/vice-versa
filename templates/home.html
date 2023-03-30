@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>Home page</title>
 </head>
 <body>
 	<h1>Vice-Versa</h1>
 
-	<form>
-  		<textarea rows="10" cols="50"></textarea>
+	<form action="{% url 'reverse' %}">
+  		<textarea rows="10" cols="50" name="usertext"></textarea>
   		<br>
   		<input type="submit" value="Reverse!">
 	</form>

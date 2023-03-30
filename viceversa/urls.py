@@ -21,4 +21,5 @@ from . import views # . означает корневую папку файла 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', views.home), # home page
+    path('reversed/', views.reverse, name='reverse'), # reverse page
 ]

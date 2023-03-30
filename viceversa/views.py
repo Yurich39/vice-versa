@@ -1,10 +1,11 @@
-from django.http import HttpResponse
 from django.shortcuts import render
-
-def about(request):
-	# reauest это параметре, содержащий в себе очень много инфы.
-	return HttpResponse("This page name is 'about'")
 
 def home(request):
 	# reauest это параметре, содержащий в себе очень много инфы.
 	return render(request, 'home.html', {'greeting':'Hello!'})
+
+def reverse(request):
+	# reauest это параметре, содержащий в себе очень много инфы.
+	user_text = request.GET['usertext']
+	#print(user_text) #такой текст выводится в терминале
+	return render(request, 'reverse.html', {'usertext':user_text, 'reversedtext':user_text[::-1]}) #теперь в файле reverse.html мы можешь обращаться к ключу 'usertext'	
